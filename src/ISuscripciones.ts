@@ -12,7 +12,7 @@ export interface ISuscripciones{
     buscarPorAnual(anual: number): Isuscriptor[]
     buscarPorInteres(interes: string): Isuscriptor[]
     buscarPorMultiplesIntereses(interes1: string, interes2:string): Isuscriptor[]
-    cambiarEstadoSuscripcion(estado: boolean): Isuscriptor | undefined
+    cambiarEstadoSuscripcion(identidad: string, estado: boolean): Isuscriptor | undefined
     notificarPorInteres(interes: string): void
     notificarTodos(): void
 }

@@ -73,3 +73,10 @@ suscripciones.crear(persona4);
 suscripciones.crear(persona5);
 suscripciones.crear(persona6);
 suscripciones.crear(persona7);
+
+suscripciones.borrar("0801-2003-00002");
+suscripciones.cambiarEstadoSuscripcion("0801-2003-00003", true);
+
+console.log("Personas del mes agosto", suscripciones.buscarPorMes(7));
+
+console.log(suscripciones.suscriptores);

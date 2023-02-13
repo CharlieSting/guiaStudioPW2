@@ -46,8 +46,8 @@ export class Suscripciones implements ISuscripciones{
     buscarPorMultiplesIntereses(interes1: string, interes2: string): Isuscriptor[] {
         return this.suscriptores.filter(suscriptor => suscriptor.intereses.includes(interes1)&& suscriptor.intereses.includes(interes2));
     }
-    cambiarEstadoSuscripcion(estado: boolean): Isuscriptor | undefined {
-        let suscriptorModificar = this.suscriptores.find(suscriptor=> suscriptor.identidad === suscriptor.identidad);
+    cambiarEstadoSuscripcion(identidad: string, estado: boolean): Isuscriptor | undefined {
+        let suscriptorModificar = this.suscriptores.find(suscriptor=> suscriptor.identidad === identidad);
         if(suscriptorModificar){
             suscriptorModificar.suscrito = estado;
     }
